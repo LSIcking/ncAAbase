@@ -25,51 +25,72 @@ Please try to work the online version so we don't process articles multiple time
 The papers that have to be processed can now be found in "Paperbase summer 2024.xlsx" inside of the "Database Update Summer 2024" folder. The entries should be entered in the "raw data update summer 2024.xlsx" file. The construction of entries is very similar to the previous version with a minor change. **Now, only the link to the PubChem site of the ncAA has to be supplied, the IUPAC, chemical formula, as well as the IUPAC name, will now be added via a script**. Please work through the entries from the top to the bottom as some entries might depend on previous entries regarding further information. Filtering-wise, one of the specific Mass spec terms, tRNA synthetase as well as one descriptive term for ncAA should already be available, therefore no further filtering is necessary. Sometimes the authors used auxotrophic strains were an endogenous tRNA/synthetase pair was used to incorporate the ncAA (no engineered tRNA/tRNA-Synthetase-pair is used). These papers can be discarded but please note it in the paperbase.
 
 Now, onto entering information into the raw database.
-**ID**: ID of the entry. Nothing to change here. If we run out of entries, just create new ones. 
+### **ID**: 
+ID of the entry. Nothing to change here. If we run out of entries, just create new ones. 
 
-**amino acid abbreviation**: Insert the amino acid abbreviation used in the paper here. If there’s no abbreviation mentioned, put **not available** (exactly how it is written here, this will make further processing much easier).
+### **amino acid abbreviation**: 
+Insert the amino acid abbreviation used in the paper here. If there’s no abbreviation mentioned, put **not available** (exactly how it is written here, this will make further processing much easier).
 
-**amino acid name in the paper**: Insert the name of the ncAA used in the paper here.
+### **amino acid name in the paper**: 
+Insert the name of the ncAA used in the paper here. If multiple names occur, please use the most abundant name in the paper
 
-**amino acid IUPAC**: *automated by script*
+### **amino acid IUPAC**: 
+*automated by script*
 
-**Chemical formula**: *automated by script*
+### **Chemical formula**: 
+*automated by script*
 
-**SMILES**: *automated by script*
+### **SMILES**: 
+*automated by script*
 
-**Derivative**: If you can make out the canonical amino acid the ncAA is similar to, add it to this column 
+###**Derivative**: 
+If you can make out the canonical amino acid the ncAA is similar to, add it to this column 
 
-**Function**: If a function is mentioned in the paper (e.g., photo-crosslinking) please add the function to this column. Try to use the same terms, as already used in the database (this makes it easier for scientists to search for use cases)
+### **Function**: 
+If a function is mentioned in the paper (e.g., photo-crosslinking) please add the function to this column. Try to use the same terms, as already used in the database (this makes it easier for scientists to search for use cases)
 
-**aaRS origin organism + amino acid**: Insert the original aaRS name here. First term the organism, where the RS natively occurs plus the amino acid that would have been naturally loaded, plus ‘RS’ (e.g., **Mj-TyrRS** – Methanocaldococcus jannaschii Tyrosine tRNA synthetase).  
+### **aaRS origin organism + amino acid**: 
+Insert the original aaRS name here. First term the organism, where the RS natively occurs plus the amino acid that would have been naturally loaded, plus ‘RS’ (e.g., **Mj-TyrRS** – Methanocaldococcus jannaschii Tyrosine tRNA synthetase).  
 
-**aaRS Mutations**: Insert the mutations that have been incorporated into the synthetase here (e.g., **Y32T, E107N, D158P, I159L, L162Q, D286R**). 
+### **aaRS Mutations**: 
+Insert the mutations that have been incorporated into the synthetase here (e.g., **Y32T, E107N, D158P, I159L, L162Q, D286R**). 
 
-**aaRS organism Name**: Insert the name of the organism the aaRS originates from (e.g., **Methanocaldococcus jannaschii**)
+### **aaRS organism Name**: 
+Insert the name of the organism the aaRS originates from (e.g., **Methanocaldococcus jannaschii**)
 
-**tRNA name**: Check, if this tRNA was previously used and was already inserted into the database. Please insert the tRNA as follows - e.g. **Mj-tRNA Cys CUA** - Mj for the organism (Methanocaldococcus jannaschii), Cys for the amino acid that would be naturally loaded onto this tRNA and CUA regarding the codon that was used. Many documented use cases with their respective sequence will be listed in this document [WIP]
+### **tRNA name**: 
+Check, if this tRNA was previously used and was already inserted into the database. Please insert the tRNA as follows - e.g. **Mj-tRNA Cys CUA** - Mj for the organism (Methanocaldococcus jannaschii), Cys for the amino acid that would be naturally loaded onto this tRNA and CUA regarding the codon that was used. Many documented use cases with their respective sequence will be listed in this document [WIP]
 
-**tRNA organism**: Insert the name of the organism the tRNA originates from (e.g., **Methanocaldococcus jannaschii**) 
+### **tRNA organism**: 
+Insert the name of the organism the tRNA originates from (e.g., **Methanocaldococcus jannaschii**) 
 
-**tRNA seq**: Insert the name of the tRNA sequence if available. If too hard to find, please leave it empty and we will find the sequence. 
+### **tRNA seq**: 
+Insert the name of the tRNA sequence if available. If too hard to find, please leave it empty and we will find the sequence. 
 
-**Codon suppression**: Please put the **ANTI-CODON** (very important) used in the paper, from there, we will insert the incorporation technique
+### **Codon suppression**: 
+Please put the **ANTI-CODON** (very important) used in the paper, from there, we will insert the incorporation technique
 
-**tested in which protein**: Please insert the protein name (e.g. **sfGFP**) as written in the paper
+### **tested in which protein**: 
+Please insert the protein name (e.g. **sfGFP**) as written in the paper
 
-**position in tested Protein**: Check for the position that was mutated to another codon for the introduction of the ncAA. Write it as amino acid that got changed + position; if more the one AA is exchanged at the same time in the protein, set a ‘+’ between the positions (e.g. G234+F278); if different positions were tested put a semicolon ‘;’ in between (e.g. G122; A123; D124). Also combinations possible (e.g. G122; A123; D124; F278; G122+F278; A123+D124). If only the position and not the amino acid is give add ‘(aa. not specified)’ (e.g. 122 (aa. not specified)). 
+### **position in tested Protein**: 
+Check for the position that was mutated to another codon for the introduction of the ncAA. Write it as amino acid that got changed + position; if more the one AA is exchanged at the same time in the protein, set a ‘+’ between the positions (e.g. G234+F278); if different positions were tested put a semicolon ‘;’ in between (e.g. G122; A123; D124). Also combinations possible (e.g. G122; A123; D124; F278; G122+F278; A123+D124). If only the position and not the amino acid is give add ‘(aa. not specified)’ (e.g. 122 (aa. not specified)). 
 
-**test in which Organism**: check the paper in which organism + strain they have tested the system. If multiple organisms were used, make a second entry where you just exchange the organism (e.g. Escherichia coli BL21-Gold(DE3))
+### **test in which Organism**: 
+check the paper in which organism + strain they have tested the system. If multiple organisms were used, make a second entry where you just exchange the organism (e.g. Escherichia coli BL21-Gold(DE3))
 
-**publication**: for the publication, just plug the name of the paper into google scholar, click on cite and copy the APA style citation.
+### **publication**: 
+for the publication, just plug the name of the paper into google scholar, click on cite and copy the APA style citation.
 
-**DOI**: Copy the DOI-link directly from the journal cite. Please make sure you are not just copying the Doi (10/11010...) but the whole link starting with “https:” 
+### **DOI**: 
+Copy the DOI-link directly from the journal cite. Please make sure you are not just copying the Doi (10/11010...) but the whole link starting with “https:” 
 
-**Link to Pubchem**: If you can find a link (e.g **. https://pubchem.ncbi.nlm.nih.gov/compound/3080772**) for the ncAA for PubChem, please put it here. *Very necessary for the script!*
+### **Link to Pubchem**: 
+If you can find a link (e.g **. https://pubchem.ncbi.nlm.nih.gov/compound/3080772**) for the ncAA for PubChem, please put it here. *Very necessary for the script!*
 
-**Person responsible for the entry**: Please insert your name
+### **Person responsible for the entry**: 
+Please insert your name
 
-If you start working on a publication, write out the used name of the ncAA as well as the abbreviation. In some cases, multiple names or abbreviations might be available in one publication. In this case, please note the most used one. If you have the name of the ncAA you can check it with the already published entries. If it is already available, please enter the PubChem link into the designated column. 
 
 
 ## Further ressources
