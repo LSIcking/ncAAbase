@@ -22,7 +22,54 @@ After merging the various scraped entries, duplicates were removed using Excel's
 
 ## Analysing each research paper
 Please try to work the online version so we don't process articles multiple times
-The papers that have to be processed can now be found in "Paperbase summer 2024.xlsx" inside of the "Database Update Summer 2024" folder. The entries should be entered in the "raw data update summer 2024.xlsx" file. The construction of entries is very similar to the previous version with a minor change. **Now, only the link to the PubChem site of the ncAA has to be supplied, the IUPAC, chemical formula, as well as the IUPAC name, will now be added via a script**. Please work through the entries from the top to the bottom as some entries might depend on previous entries regarding further information. Filtering-wise, one of the specific Mass spec terms, tRNA synthetase as well as one descriptive term for ncAA should already be available, therefore no further filtering is necessary.
+The papers that have to be processed can now be found in "Paperbase summer 2024.xlsx" inside of the "Database Update Summer 2024" folder. The entries should be entered in the "raw data update summer 2024.xlsx" file. The construction of entries is very similar to the previous version with a minor change. **Now, only the link to the PubChem site of the ncAA has to be supplied, the IUPAC, chemical formula, as well as the IUPAC name, will now be added via a script**. Please work through the entries from the top to the bottom as some entries might depend on previous entries regarding further information. Filtering-wise, one of the specific Mass spec terms, tRNA synthetase as well as one descriptive term for ncAA should already be available, therefore no further filtering is necessary. Sometimes the authors used auxotrophic strains were an endogenous tRNA/synthetase pair was used to incorporate the ncAA (no engineered tRNA/tRNA-Synthetase-pair is used). These papers can be discarded but please note it in the paperbase.
+
+Now, onto entering information into the raw database.
+**ID**: ID of the entry. Nothing to change here. If we run out of entries, just create new ones. 
+
+**amino acid abbreviation**: Insert the amino acid abbreviation used in the paper here. If there’s no abbreviation mentioned, put **not available** (exactly how it is written here, this will make further processing much easier).
+
+**amino acid name in the paper**: Insert the name of the ncAA used in the paper here.
+
+**amino acid IUPAC**: *automated by script*
+
+**Chemical formula**: *automated by script*
+
+**SMILES**: *automated by script*
+
+**Derivative**: If you can make out the canonical amino acid the ncAA is similar to, please enter here. 
+
+**Function**: If a function is mentioned in the paper (e.g., photo-crosslinking) please add the function here.  Try to use the same terms, as already used in the database 
+
+**aaRS origin organism + amino acid**: Insert the original aaRS name here. First term the organism, where the RS natively occur, plus the amino acid that would have been naturally loaded, plus ‘RS’ (e.g., **Mj-TyrRS** – Methanocaldococcus jannaschii Tyrosine tRNA synthetase).  
+
+**aaRS Mutations**: Insert the mutations that have been incorporated into the synthetase here (e.g., Y32T, E107N, D158P, I159L, L162Q, D286R). 
+
+**aaRS organism Name**: Insert the name of the organism the aaRS originates from (e.g., **Methanocaldococcus jannaschii**)
+
+**tRNA name**: [[WIP]]#
+
+**tRNA organism**: Insert the name of the organism the tRNA originates from (e.g., Methanocaldococcus jannaschii) 
+
+**tRNA seq**: Insert the name of the tRNA sequence if available. If too hard to find, please leave it empty and we will find the sequence. 
+
+**Codon suppression**: in this case, please put the **ANTI-CODON** (very important) used in the paper, from there, we will insert the incorporation technique
+
+**tested in which protein**: 
+
+**position in tested Protein**:
+
+**test in which Organism**: 
+
+**publication**:
+
+**DOI**:
+
+**Link to Pubchem**:
+
+**Person responsible for the entry**: Please insert your name
+
+If you start working on a publication, write out the used name of the ncAA as well as the abbreviation. In some cases, multiple names or abbreviations might be available in one publication. In this case, please note the most used one. If you have the name of the ncAA you can check it with the already published entries. If it is already available, please enter the PubChem link into the designated column. 
 
 
 
