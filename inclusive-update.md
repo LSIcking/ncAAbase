@@ -74,7 +74,7 @@ Please put the **ANTI-CODON** (very important) used in the paper, from there, we
 Please insert the protein name (e.g. **sfGFP**) as written in the paper
 
 ### **position in tested Protein**: 
-Check for the position that was mutated to another codon for the introduction of the ncAA. Write it as amino acid that got changed + position; if more the one AA is exchanged at the same time in the protein, set a ‘+’ between the positions (e.g. G234+F278); if different positions were tested put a semicolon ‘;’ in between (e.g. G122; A123; D124). Also combinations possible (e.g. G122; A123; D124; F278; G122+F278; A123+D124). If only the position and not the amino acid is give add ‘(aa. not specified)’ (e.g. 122 (aa. not specified)). 
+Check for the position that was mutated to another codon for the introduction of the ncAA. Write it as amino acid that got changed + position; if more the one AA is exchanged at the same time in the protein, set a ‘+’ between the positions (e.g. G234+F278); if different positions were tested put a semicolon ‘;’ in between (e.g. G122; A123; D124). Also combinations possible (e.g. G122; A123; D124; F278; G122+F278; A123+D124). If only the position and not the amino acid is given add ‘*’ (e.g. *122). 
 
 ### **test in which Organism**: 
 check the paper in which organism + strain they have tested the system. If multiple organisms were used, make a second entry where you just exchange the organism (e.g. Escherichia coli BL21-Gold(DE3))
