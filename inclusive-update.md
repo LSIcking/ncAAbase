@@ -43,7 +43,7 @@ Insert the name of the ncAA used in the paper here. If multiple names occur, ple
 ### **SMILES**: 
 *automated by script*
 
-###**Derivative**: 
+### **Derivative**: 
 If you can make out the canonical amino acid the ncAA is similar to, add it to this column 
 
 ### **Function**: 
